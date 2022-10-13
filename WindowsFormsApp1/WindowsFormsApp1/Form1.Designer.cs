@@ -30,11 +30,10 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lblLastName = new System.Windows.Forms.Label();
-            this.lblFirstName = new System.Windows.Forms.Label();
+            this.FullName = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnWriteToFile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -44,30 +43,14 @@ namespace WindowsFormsApp1
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
             // 
-            // textBox2
+            // FullName
             // 
-            this.textBox2.Location = new System.Drawing.Point(390, 96);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
-            // 
-            // lblLastName
-            // 
-            this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(305, 52);
-            this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(35, 13);
-            this.lblLastName.TabIndex = 2;
-            this.lblLastName.Text = "label1";
-            // 
-            // lblFirstName
-            // 
-            this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(308, 96);
-            this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(35, 13);
-            this.lblFirstName.TabIndex = 3;
-            this.lblFirstName.Text = "label2";
+            this.FullName.AutoSize = true;
+            this.FullName.Location = new System.Drawing.Point(305, 52);
+            this.FullName.Name = "FullName";
+            this.FullName.Size = new System.Drawing.Size(35, 13);
+            this.FullName.TabIndex = 2;
+            this.FullName.Text = "label1";
             // 
             // btnAdd
             // 
@@ -87,16 +70,25 @@ namespace WindowsFormsApp1
             this.listBox1.Size = new System.Drawing.Size(134, 277);
             this.listBox1.TabIndex = 5;
             // 
+            // btnWriteToFile
+            // 
+            this.btnWriteToFile.Location = new System.Drawing.Point(390, 191);
+            this.btnWriteToFile.Name = "btnWriteToFile";
+            this.btnWriteToFile.Size = new System.Drawing.Size(75, 23);
+            this.btnWriteToFile.TabIndex = 6;
+            this.btnWriteToFile.Text = "button1";
+            this.btnWriteToFile.UseVisualStyleBackColor = true;
+            this.btnWriteToFile.Click += new System.EventHandler(this.btnWriteToFile_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnWriteToFile);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.lblFirstName);
-            this.Controls.Add(this.lblLastName);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.FullName);
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -108,11 +100,10 @@ namespace WindowsFormsApp1
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label lblLastName;
-        private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.Label FullName;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btnWriteToFile;
     }
 }
 
