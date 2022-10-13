@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
             FullName.Text = Resource1.FullName;
             btnAdd.Text = Resource1.Add;
+            btnWriteToFile.Text = Resource1.WriteToFile;
 
             listBox1.DataSource = users;
             listBox1.ValueMember = "ID";
@@ -33,6 +35,25 @@ namespace WindowsFormsApp1
 
             u.FullName = textBox1.Text;
             users.Add(u);
+        }
+
+        private void btnWriteToFile_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+
+            sfd.InitialDirectory = Application.StartupPath;
+            sfd.Filter = "Vesszővel tagolt szöveg (*.cs) |*.csv";
+            sfd.DefaultExt = "csv";
+            sfd.AddExtension = true;
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter sw = new StreamWriter(sfd.FileName, false);
+                foreach (var s in users)
+                {
+                    sw.WriteLine($"{s.ID};{s.FullName}");
+                }
+                sw.Close();
+            }
         }
     }
 }

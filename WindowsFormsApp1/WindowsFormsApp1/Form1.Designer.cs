@@ -33,6 +33,7 @@ namespace WindowsFormsApp1
             this.FullName = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnWriteToFile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -69,11 +70,22 @@ namespace WindowsFormsApp1
             this.listBox1.Size = new System.Drawing.Size(134, 277);
             this.listBox1.TabIndex = 5;
             // 
+            // btnWriteToFile
+            // 
+            this.btnWriteToFile.Location = new System.Drawing.Point(390, 191);
+            this.btnWriteToFile.Name = "btnWriteToFile";
+            this.btnWriteToFile.Size = new System.Drawing.Size(75, 23);
+            this.btnWriteToFile.TabIndex = 6;
+            this.btnWriteToFile.Text = "button1";
+            this.btnWriteToFile.UseVisualStyleBackColor = true;
+            this.btnWriteToFile.Click += new System.EventHandler(this.btnWriteToFile_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnWriteToFile);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.FullName);
@@ -91,6 +103,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label FullName;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btnWriteToFile;
     }
 }
 
