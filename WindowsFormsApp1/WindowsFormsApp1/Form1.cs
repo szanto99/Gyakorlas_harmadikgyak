@@ -18,8 +18,7 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
-            lblLastName.Text = Resource1.LastName;
-            lblFirstName.Text = Resource1.FirstName;
+            FullName.Text = Resource1.FullName;
             btnAdd.Text = Resource1.Add;
 
             listBox1.DataSource = users;
@@ -32,8 +31,7 @@ namespace WindowsFormsApp1
         {
             var u = new User();
 
-            u.LastName = textBox1.Text;
-            u.FirstName = textBox2.Text;
+            u.FullName = textBox1.Text;
             users.Add(u);
         }
     }
